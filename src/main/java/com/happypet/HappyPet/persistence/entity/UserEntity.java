@@ -3,8 +3,10 @@ package com.happypet.HappyPet.persistence.entity;
 
 
 import com.happypet.HappyPet.enumerators.UserRole;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -15,8 +17,10 @@ import javax.persistence.*;
 @Data
 @Builder
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "users")
-public class UserEntity {
+public class UserEntity extends AbstractEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

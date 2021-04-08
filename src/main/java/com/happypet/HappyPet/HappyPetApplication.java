@@ -8,6 +8,7 @@ public class HappyPetApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HappyPetApplication.class, args);
+
 	}
 
 }
