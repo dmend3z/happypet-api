@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 import net.bytebuddy.implementation.bind.annotation.BindingPriority;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Data
@@ -20,6 +21,7 @@ public class CreateUserDto {
     private String phoneNumber;
 
     @NotBlank(message = "Must have email")
+    @Email
     private String email;
 
     @NotBlank(message = "Must have password")
