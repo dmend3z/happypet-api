@@ -24,7 +24,7 @@ public class UserEntity extends AbstractEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long userId;
 
     @Column(nullable = false, length = 100)
     private String firstName;
@@ -32,10 +32,10 @@ public class UserEntity extends AbstractEntity {
     private String lastName;
     @Column(nullable = false, unique = true)
     private String email;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String phoneNumber;
     @Column(nullable = false)
-    private String password;
+    private String encryptedPassword;
 
     @Enumerated(EnumType.ORDINAL)
     @Column(nullable = false)
