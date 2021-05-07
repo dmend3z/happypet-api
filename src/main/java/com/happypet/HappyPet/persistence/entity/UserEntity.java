@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * The user entity
@@ -37,7 +38,12 @@ public class UserEntity extends AbstractEntity {
     @Column(nullable = false)
     private String encryptedPassword;
 
+    @OneToMany(mappedBy = "petId")
+    private List<PetEntity> pets;
+
     @Enumerated(EnumType.ORDINAL)
     @Column(nullable = false)
     private UserRole role;
+
+
 }

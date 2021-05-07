@@ -8,6 +8,7 @@ public class PetConverter {
 
     public static PetDetailsDto fromPetEntityToPetDetailsDto(PetEntity petEntity) {
         return PetDetailsDto.builder()
+                .petId(petEntity.getPetId())
                 .name(petEntity.getName())
                 .specie(petEntity.getSpecie())
                 .age(petEntity.getAge())
@@ -15,6 +16,7 @@ public class PetConverter {
                // .petcolor(petEntity.getPetcolor())
                 .image(petEntity.getImage())
                 .description(petEntity.getDescription())
+                .userId(petEntity.getUserId().getUserId())
                 .active(petEntity.isActive())
                 .build();
 

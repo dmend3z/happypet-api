@@ -5,7 +5,7 @@ public enum PetSpecie {
     CAT("CAT"),
     DOG("DOG"),
     BIRD("BIRD"),
-    FARM_ANIMALS("FARM"),
+    FARM("FARM"),
     HORSE("HORSE"),
     FISH("FISH");
 
@@ -14,7 +14,6 @@ public enum PetSpecie {
     PetSpecie(String name) {
         this.name = name;
     }
-
     /**
      * Get specie name
      * @return the name

@@ -6,6 +6,8 @@ public class ErrorMessages {
     public static final String USER_NOT_FOUND = "The user wasn't found";
 
     public static final String PET_ALREADY_EXISTS = "";
+    public static final String PET_NOT_FOUND = "Can't find any pet with the given id";
+
 
     public static final String DATABASE_COMMUNICATION_ERROR = "Database communication error";
 

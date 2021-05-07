@@ -26,7 +26,7 @@ public class PetEntity {
     @Column(nullable = false, length = 100)
     private String name;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private PetSpecie specie;
 
@@ -59,7 +59,8 @@ public class PetEntity {
     @Column(nullable = false)
     private boolean active;
 
-    @Column(nullable = false)
-    private long userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userId", nullable = false)
+    private UserEntity userId;
 
 }

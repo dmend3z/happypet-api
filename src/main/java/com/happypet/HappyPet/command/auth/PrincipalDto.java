@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 @Builder
 public class PrincipalDto {
-    private Long userId;
+    private long userId;
     private String firstName;
     private UserRole userRole;
 }
